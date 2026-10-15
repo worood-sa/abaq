@@ -549,7 +549,6 @@ details.rv[open] summary{display:none}
         <div class="pillars"><span>وضوح البيانات</span><span>حماية الخصوصية</span><span>صدق الإعلان</span><span>عدل في حل المشكلات</span></div>
         <div class="cta">
           <a class="btn gold" id="storeBtn" href="https://worood-sa.github.io/abaq/" target="_blank" rel="noopener">افتحي متجر عَبق</a>
-          <a class="btn wa" id="waBtn" href="#" target="_blank" rel="noopener">اطلبي بالواتساب</a>
         </div>
       </div>
       <div style="text-align:center">
@@ -573,12 +572,9 @@ details.rv[open] summary{display:none}
 /* ========= ✏️ الإعدادات ========= */
 const CONFIG={
   storeUrl:"https://worood-sa.github.io/abaq/",                  // رابط المتجر بعد رفعه على GitHub، مثال: https://اسمك.github.io/abaq
-  whatsapp:"966504319868"
 };
 /* ================================ */
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-const wa="https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent("السلام عليكم، أبي أطلب من متجر عَبق");
-$("#waBtn").href=wa;
 if(CONFIG.storeUrl){
   $("#storeBtn").href=CONFIG.storeUrl;
   try{ if(window.QRCode){$("#qr").innerHTML="";new QRCode($("#qr"),{text:CONFIG.storeUrl,width:208,height:208,colorDark:"#1c0f14",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M});} }catch(_){}
